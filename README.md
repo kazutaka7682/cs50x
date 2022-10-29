@@ -9,8 +9,7 @@ C, Python, JavaScript, HTML/CSS, Sqlite, etc. were used in this course.
 
 At the end of the course, students completed a personal project using Flask, a Python web development framework.
 
-
-本リポジトリは、cs50xでの成果をまとめたものである。
+(本リポジトリは、cs50xでの成果をまとめたものである。
 
 cs50xとはharvard大学が開講している基礎的なコンピュータサイエンスの講義である。
 
@@ -18,4 +17,4 @@ cs50xとはharvard大学が開講している基礎的なコンピュータサ�
 
 本講義では、C、Python、JavaScript、HTML/CSS、Sqlite、等を使用した。
 
-コース修了に際しては、Pythonのweb開発フレームワークであるFlaskを使用し、個人プロジェクトの遂行を行なった。
+コース修了に際しては、Pythonのweb開発フレームワークであるFlaskを使用し、個人プロジェクトの遂行を行なった。)
