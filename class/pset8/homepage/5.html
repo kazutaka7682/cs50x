@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>
+            n4
+        </title>
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if(input.value === 'パラメータ変動に合わせてその都度ゲインの導出を行う制御則'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+    <div class="e">
+        <h1>制御工学</h1>
+    </div>
+    <div class="section">
+                <h2 style="text-align: center;">Question:制御対象の特性変動に対応するためのGS制御とは何か?</h2>
+                <hr>
+                <div style="text-align: center">
+                <input type="text"></input>
+                <button id="check">submit</button>
+                </div>
+                <p id="feedback1"></p>
+
+            </div>
+            <hr>
+    <a href = "index.html">go back to main page</a>
+    </body>
+</html>

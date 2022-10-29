@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>
+            n1
+        </title>
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for(let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="a">
+            <h1>熱力学</h1>
+        </div>
+        <div class="section">
+                <h2 style="text-align: center;">Question：有名なエントロピー増大則でも知られる熱力学第二法則, 提唱したのは誰?</h2>
+                <hr>
+
+                <form style="text-align: center;">
+                    <button class="incorrect">マクスウェル</button>
+                    <button class="correct">ボルツマン</button>
+                    <button class="incorrect">クラジウス</button>
+                    <button class="incorrect">ケルビン</button>
+                    <button class="incorrect">カルノー</button>
+                </form>
+
+                <p id="feedback1"></p>
+
+            </div>
+        <a href = "index.html">go back to main page</a>
+    </body>
+</html>

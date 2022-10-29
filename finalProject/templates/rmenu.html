@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Rmenu
+{% endblock %}
+
+{% block main %}
+    <h2> メニュー登録画面</h2>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul type="disc">
+        {% for message in messages %}
+            <li class="flash">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/rmenu" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="menu_name" placeholder="メニュー名" type="text">
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="minute" placeholder="調理時間(分)" type="integer">
+        </div>
+
+        <div class="form-group">
+            <select name="wayou">
+                <option disabled selected value="">和洋</option>
+                <option value="和">和</option>
+                <option value="洋">洋</option>
+            </select>
+            <!-- <input class="form-control" name="wayou" placeholder="和洋" type="text"> -->
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="taste" placeholder="味の特徴(ex.辛い)" type="text">
+        </div>
+
+        <div class="form-group">
+            <textarea autocomplete="off" autofocus class="form-control" name="overview" placeholder="メニュー概要" type="text"></textarea>
+        </div>
+
+        <div class="form-group">
+            <select name="seasonings_1">
+                <option disabled selected value="">使用調味料1</option>
+                {% if seasonings_1 %}
+                <ul>
+                    {% for seasoning_1 in seasonings_1 %}
+                        <option value="{{ seasoning_1 }}">{{ seasoning_1 }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="seasonings_2">
+                <option disabled selected value="">使用調味料2</option>
+                {% if seasonings_2 %}
+                <ul>
+                    {% for seasoning_2 in seasonings_2 %}
+                        <option value="{{ seasoning_2 }}">{{ seasoning_2 }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+
+
+        <div class="form-group">
+            <select name="main_ingredients">
+                <option disabled selected value="">メイン使用食材(肉類)</option>
+                {% if main_ingredients %}
+                <ul>
+                    {% for main_ingredient in main_ingredients %}
+                        <option value="{{ main_ingredient }}">{{ main_ingredient }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="ingredients_1">
+                <option disabled selected value="">使用食材1(野菜類)</option>
+                {% if ingredients_1 %}
+                <ul>
+                    {% for ingredient_1 in ingredients_1 %}
+                        <option value="{{ ingredient_1 }}">{{ ingredient_1 }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="ingredients_2">
+                <option disabled selected value="">使用食材2(野菜類)</option>
+                {% if ingredients_2 %}
+                <ul>
+                    {% for ingredient_2 in ingredients_2 %}
+                        <option value="{{ ingredient_2 }}">{{ ingredient_2 }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="ingredients_3">
+                <option disabled selected value="">使用食材3(野菜類)</option>
+                {% if ingredients_3 %}
+                <ul>
+                    {% for ingredient_3 in ingredients_3 %}
+                        <option value="{{ ingredient_3 }}">{{ ingredient_3 }}</option>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">登録</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: 実行時間がsort2と比べて遅い点, 下限値がsort3と比べて大きい点より判断した.
+
+sort2 uses: Merge sort
+
+How do you know?: 実行時間がsort1, sort3と比較して2倍から5倍ほど早い点より判断した.
+
+sort3 uses: Selection sort
+
+How do you know?: 実行時間がsort1と似通っているが, 実行時間最小値（下限値）がsort1より小さい点より判断した.

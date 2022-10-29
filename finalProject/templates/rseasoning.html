@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Rseasoning
+{% endblock %}
+
+{% block main %}
+    <h2>調味料登録</h2>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul type="disc">
+        {% for message in messages %}
+            <li class="flash">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/rseasoning" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="seasoning_name" placeholder="調味料名" type="text">
+        </div>
+
+        <div class="form-group">
+            <select name="flag">
+                <option disabled selected value="">所有有無</option>
+                <option value="True">有</option>
+                <option value="False">無</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">登録</button>
+    </form>
+{% endblock %}

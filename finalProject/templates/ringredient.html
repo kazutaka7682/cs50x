@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ringredient
+{% endblock %}
+
+{% block main %}
+
+    <h2>食材登録</h2>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul type="disc">
+        {% for message in messages %}
+            <li class="flash">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/ringredient" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="ingredient_name" placeholder="食材名" type="text">
+        </div>
+
+        <div class="form-group">
+            <select name="flag">
+                <option disabled selected value="">所有有無</option>
+                <option value="True">有</option>
+                <option value="False">無</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="element">
+                <option disabled selected value="">食材要素</option>
+                <option value="肉（硬め部位）">肉（硬め部位）</option>
+                <option value="肉（柔らかめ部位）">肉（柔らかめ部位）</option>
+                <option value="野菜（硬め）">野菜（硬め）</option>
+                <option value="野菜（柔らかめ）">野菜（柔らかめ）</option>
+                <option value="その他">その他</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">登録</button>
+    </form>
+{% endblock %}

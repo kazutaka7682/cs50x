@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lmenu
+{% endblock %}
+
+{% block main %}
+    <h2>メニュー一覧</h2>
+
+    <ul>
+        {% for choice in menu_name %}
+            <h4>{{ choice }}</h4>
+        {% endfor %}
+    </ul>
+{% endblock %}

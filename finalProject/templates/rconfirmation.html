@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Rconfirmation
+{% endblock %}
+
+{% block main %}
+    <h2>登録内容確認</h2>
+
+    <form action="{{ url_for('register_confirmation') }}" method="post">
+        <h3>登録調味料</h3>
+        <ul>
+            {% for s_choice in seasoning_name %}
+                <h4>{{ s_choice }}</h4>
+                <button class="btn btn-primary" type="submit">調味料削除</button>
+            {% endfor %}
+        </ul>
+
+        <h3>登録食材</h3>
+        <ul>
+            {% for i_choice in ingredient_name %}
+                <h4>{{ i_choice }}</h4>
+                <button class="btn btn-primary" type="submit">食材削除</button>
+            {% endfor %}
+        </ul>
+    </form>
+
+
+{% endblock %}

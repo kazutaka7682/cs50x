@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>
+            n4
+        </title>
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if(input.value === 'David'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+    <div class="f">
+        <h1>情報処理</h1>
+    </div>
+    <div class="section">
+                <h2 style="text-align: center;">Question:CS50において絶大な地位を確立した教授は誰か?</h2>
+                <hr>
+                <div style="text-align: center">
+                <input type="text"></input>
+                <button id="check">submit</button>
+                </div>
+                <p id="feedback1"></p>
+
+            </div>
+            <hr>
+    <a href = "index.html">go back to main page</a>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    SmenuL
+{% endblock %}
+
+{% block main %}
+    <h2>提案メニュー</h2>
+
+    <ul>
+        <li>メニュー : {{ name }}</li>
+        <li>調理時間 : {{ minute }}</li>
+        <li>和洋 : {{ wayou }}</li>
+        <li>味の特徴 : {{ taste }}</li>
+        <li>概要 : {{ overview }}</li>
+        <li>使用調味料1 : {{ seasoning_1 }}</li>
+        <li>使用調味料2 : {{ seasoning_2 }}</li>
+        <li>メイン使用食材（肉類） : {{ main_ingredient }}</li>
+        <li>使用食材1（野菜類） : {{ ingredient_1 }}</li>
+        <li>使用食材2（野菜類） : {{ ingredient_2 }}</li>
+        <!-- <li>使用食材3（野菜類） : {{ ingredient_3 }}</li> -->
+    </ul>
+
+    <h2>{{ failed_taste }}</h2>
+    <ul>
+        {% for choice in failed_name %}
+            <h4>{{ choice }}</h4>
+        {% endfor %}
+    </ul>
+
+    <h2>購入レコメンド</h2>
+
+
+{% endblock %}
